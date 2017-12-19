@@ -20,6 +20,7 @@ export async function main(event, context, callback) {
       noteId: uuid.v1(),
       content: data.content,
       attachment: data.attachment,
+      attachkey: data.attachkey,
       createdAt: new Date().getTime()
     }
   };

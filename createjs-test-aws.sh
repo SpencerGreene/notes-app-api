@@ -10,4 +10,4 @@ apig-test \
 --api-gateway-region='us-west-2' \
 --path-template='/notes' \
 --method='POST' \
---body='{"content":"hello world","attachment":"hello.jpg"}'
+--body='{"content":"it is the end of the world","attachment":"hello.jpg","attachkey":"helloKey"}'

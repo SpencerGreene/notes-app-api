@@ -10,10 +10,11 @@ export async function main(event, context, callback) {
       userId: event.requestContext.identity.cognitoIdentityId,
       noteId: event.pathParameters.id
     },
-    UpdateExpression: "SET content = :content, attachment = :attachment",
+    UpdateExpression: "SET content = :content, attachment = :attachment, attachkey = :attachkey",
     ExpressionAttributeValues: {
       ":attachment": data.attachment ? data.attachment : null,
-      ":content": data.content ? data.content : null
+      ":content": data.content ? data.content : null,
+      ":attachkey": data.attachkey ? data.attachkey : null
     },
     ReturnValues: "ALL_NEW"
   };
